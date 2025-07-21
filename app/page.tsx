@@ -125,7 +125,7 @@ export default function Home() {
                 your unique love story.
               </p>
               <p className="text-lg leading-relaxed">
-                Our team of skilled photographers and videographers combines traditional techniques with modern
+                Our team of skilled photographers and videographers combine traditional techniques with modern
                 technology to deliver stunning visuals that you'll treasure forever. Every frame is crafted with passion
                 and precision.
               </p>
