@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Indus Wedding Films - Capturing Precious Moments",
   description:
-    "Professional wedding photography and videography services with 15+ years of experience. Capturing your special moments with passion and precision.",
-    generator: 'v0.dev'
+    "Professional wedding photography and videography services with 10+ years of experience. Capturing your special moments with passion and precision.",
+    generator: 'Sumalya Chatterjee'
 }
 
 export default function RootLayout({
