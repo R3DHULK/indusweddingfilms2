@@ -11,6 +11,7 @@ import { MobileMenu } from "@/components/mobile-menu"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { ExpandableGallery } from "@/components/expandable-gallery"
+import Link from "next/link";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -31,15 +32,15 @@ export default function Home() {
     >
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <Image
-          src="/images/home-hero.jpeg"
-          alt="Wedding couple in traditional attire"
-          fill
-          className="object-cover"
-          priority
+        <video
+          src="/images/video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
-
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 p-6 bg-black/80 backdrop-blur-sm transition-all duration-300">
           <div className="flex justify-between items-center max-w-7xl mx-auto">
@@ -75,39 +76,51 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">Our Favorites</h2>
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="aspect-video bg-gray-800 rounded-lg relative overflow-hidden">
-                    <Image
-                      src="/placeholder.svg?height=200&width=300"
-                      alt={`Wedding video ${i}`}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <div className="w-0 h-0 border-l-[8px] border-l-white border-y-[6px] border-y-transparent ml-1"></div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                {/* Video 1 */}
+                <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                  <img
+                    src="/videos/photo1.jpg"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Video 2 */}
+                <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                  <img
+                    src="/videos/photo2.jpg"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Video 3 */}
+                <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                  <img
+                    src="/videos/photo3.jpg"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
+
               <div className="text-center">
-                <Button
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-black bg-transparent"
-                >
-                  WATCH MORE
-                </Button>
+                <Link href="https://www.facebook.com/indusweddingfilms" passHref>
+                  <Button
+                    variant="outline"
+                    className="border-white text-white hover:bg-white hover:text-black bg-transparent"
+                  >
+                    WATCH MORE
+                  </Button>
+                </Link>
               </div>
+
             </div>
             <div className="space-y-6">
               <div className="bg-amber-500 text-black px-4 py-2 inline-block rounded">
-                <span className="font-bold">7+ YEARS EXPERIENCE</span>
+                <span className="font-bold">10+ YEARS EXPERIENCE</span>
               </div>
               <h3 className="text-3xl font-bold">About Indus Wedding Films</h3>
               <p className="text-lg leading-relaxed">
-                With over 7 years of experience in capturing life's most precious moments, Indus Wedding Films has been
+                With over 10 years of experience in capturing life's most precious moments, Indus Wedding Films has been
                 the trusted choice for couples across India. We specialize in creating cinematic wedding films that tell
                 your unique love story.
               </p>
@@ -133,11 +146,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="bg-amber-500 text-black px-6 py-2 inline-block rounded-full mb-6">
-              <span className="font-bold">7+ YEARS OF EXCELLENCE</span>
+              <span className="font-bold">10+ YEARS OF EXCELLENCE</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Us</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              With over 7 years of experience, we bring unmatched expertise and passion to every wedding we capture.
+              With over 10 years of experience, we bring unmatched expertise and passion to every wedding we capture.
             </p>
           </div>
 
@@ -145,8 +158,8 @@ export default function Home() {
             {[
               {
                 icon: <Award className="h-12 w-12" />,
-                title: "7+ Years Experience",
-                description: "Over 7 years of capturing precious moments with expertise and passion.",
+                title: "10+ Years Experience",
+                description: "Over 10 years of capturing precious moments with expertise and passion.",
               },
               {
                 icon: <Camera className="h-12 w-12" />,
@@ -201,18 +214,18 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
               {
-                text: "Extremely satisfied and really happy that team did our pre-wedding shoot. he has clicked such amazing pictures and given us life time memories. Would definitely recommend Alapon Photography.",
-                author: "Baishali Bhattacharjee",
+                text: "Indus Wedding Films captured our wedding day like a dream! Every photo is filled with emotion, love, and joy. Their team was professional, friendly, and knew exactly how to make us feel comfortable. We’re so grateful for these memories – truly the best decision we made for our big day!",
+                author: "Priyanka Dutta",
                 rating: 5,
               },
               {
-                text: "Outstanding service and incredible attention to detail. The wedding film exceeded all our expectations and captured every precious moment beautifully.",
-                author: "Priya & Rahul",
+                text: "From the pre-wedding shoot to the final album, everything was flawless. The creativity and attention to detail were amazing. Indus Wedding Films told our story through their lens, and now we have photos that we’ll treasure forever. Thank you for making our moments timeless!",
+                author: "Ritika & Rudra",
                 rating: 5,
               },
               {
-                text: "Professional, creative, and passionate about their work. The team made us feel comfortable throughout the entire process. Highly recommended!",
-                author: "Sneha Sharma",
+                text: "The Indus Wedding Films team was incredibly professional and always on time. They understood our vision and delivered more than we hoped for. Every guest praised our wedding film and photos – it felt like a movie! Highly recommended to anyone looking for top-tier wedding photography.",
+                author: "Oindrila Bhattacharya",
                 rating: 5,
               },
             ].map((testimonial, index) => (
@@ -238,7 +251,7 @@ export default function Home() {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-red-900 bg-transparent font-semibold px-8 py-3 rounded-full"
               onClick={() => {
-                window.open("https://www.google.com/search?q=Indus+Wedding+Films+reviews", "_blank")
+                window.open("https://g.co/kgs/a2Wi39p", "_blank")
               }}
             >
               Write a Review
@@ -260,7 +273,7 @@ export default function Home() {
               <div className="flex items-center justify-center gap-4">
                 <Phone className="h-6 w-6 text-amber-500" />
                 <div>
-                  <p className="font-semibold">+91 70593 37480</p>
+                  <p className="font-semibold">+91 89104 45607</p>
                   <p className="text-sm text-muted-foreground">Call us anytime</p>
                 </div>
               </div>
@@ -283,15 +296,35 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center gap-4 pt-4">
-                <Button variant="ghost" size="icon" className="hover:text-amber-500">
-                  <Facebook className="h-6 w-6" />
-                </Button>
-                <Button variant="ghost" size="icon" className="hover:text-amber-500">
-                  <Instagram className="h-6 w-6" />
-                </Button>
-                <Button variant="ghost" size="icon" className="hover:text-amber-500">
-                  <Youtube className="h-6 w-6" />
-                </Button>
+                <a
+                  href="https://www.facebook.com/indusweddingfilms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="hover:text-amber-500">
+                    <Facebook className="h-6 w-6" />
+                  </Button>
+                </a>
+
+                <a
+                  href="https://instagram.com/indusweddingfilms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="hover:text-amber-500">
+                    <Instagram className="h-6 w-6" />
+                  </Button>
+                </a>
+
+                <a
+                  href="https://youtube.com/@indusweddingfilms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="hover:text-amber-500">
+                    <Youtube className="h-6 w-6" />
+                  </Button>
+                </a>
               </div>
 
               <div className="pt-6">
@@ -359,7 +392,7 @@ export default function Home() {
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 text-amber-500" />
-                  <p className="text-sm">+91 70593 37480</p>
+                  <p className="text-sm">+91 89104 45607</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-amber-500" />
@@ -381,16 +414,35 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex gap-3">
-                <Button variant="ghost" size="icon" className="text-white hover:text-amber-500 p-1">
-                  <Facebook className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-white hover:text-amber-500 p-1">
-                  <Instagram className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-white hover:text-amber-500 p-1">
-                  <Youtube className="h-5 w-5" />
-                </Button>
+                <a
+                  href="https://www.facebook.com/indusweddingfilms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="text-white hover:text-amber-500 p-1">
+                    <Facebook className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a
+                  href="https://instagram.com/indusweddingfilms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="text-white hover:text-amber-500 p-1">
+                    <Instagram className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a
+                  href="https://youtube.com/@indusweddingfilms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="text-white hover:text-amber-500 p-1">
+                    <Youtube className="h-5 w-5" />
+                  </Button>
+                </a>
               </div>
+
             </div>
           </div>
 
@@ -403,6 +455,6 @@ export default function Home() {
       {/* Fixed Elements */}
       <WhatsAppButton />
       <ScrollToTop />
-    </div>
+    </div >
   )
 }
