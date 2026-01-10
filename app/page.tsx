@@ -17,6 +17,8 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const [showContent, setShowContent] = useState(false)
 
+  const getCurrentYear = () => new Date().getFullYear()
+
   const handleLoadingComplete = () => {
     setIsLoading(false)
     setTimeout(() => setShowContent(true), 100)
@@ -447,7 +449,9 @@ export default function Home() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-sm text-gray-400">Copyright 2025. All rights reserved By Indus Wedding Films</p>
+            <p className="text-sm text-gray-400">
+              Copyright {getCurrentYear()} © The Story Writer Aditya Chakraborty. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
