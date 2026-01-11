@@ -13,7 +13,7 @@ export function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+918910445607"
+    const phoneNumber = "+918777409074"
     const message = "Hi! I would like to book an appointment for photography services."
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
