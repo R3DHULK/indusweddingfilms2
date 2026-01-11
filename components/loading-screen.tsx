@@ -50,8 +50,7 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
           {/* Camera Flash */}
           <div className="absolute top-2 right-4 w-4 h-3 bg-gray-600 rounded-sm"></div>
 
-          {/* Camera Brand */}
-          <div className="absolute bottom-2 left-4 text-white text-xs font-bold">INDUS</div>
+          <div className="absolute bottom-2 left-4 text-white text-xs font-bold">TSW</div>
         </div>
 
         {/* Shutter Animation */}
@@ -84,8 +83,8 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
 
       {/* Loading Text */}
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center">
-        <div className="text-white text-xl font-bold mb-2 tracking-wider">INDUS WEDDING FILMS</div>
-        <div className="text-amber-500 text-sm tracking-widest animate-pulse">CAPTURING MOMENTS...</div>
+        <div className="text-white text-xl font-bold mb-2 tracking-wider">THE STORY WRITER BY</div>
+        <div className="text-amber-500 text-sm tracking-widest animate-pulse">ADITYA CHAKRABORTY</div>
       </div>
     </div>
   )
